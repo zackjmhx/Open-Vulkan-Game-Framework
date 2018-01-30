@@ -4,6 +4,10 @@
 #include <chrono>
 #include <iostream>
 
+OvgfGame::OvgfGame() : window() {
+}
+
+
 void OvgfGame::launch() {
 
 	if (window.getOvgfWindow(600, 400) == nullptr)
