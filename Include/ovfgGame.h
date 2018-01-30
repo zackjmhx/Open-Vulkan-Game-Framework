@@ -3,4 +3,8 @@
 #include <ovgfWindow.h>
 #include <stdexcept>
 
+class OvgfGame {
+public:
+	void launch();
+};
 #endif
