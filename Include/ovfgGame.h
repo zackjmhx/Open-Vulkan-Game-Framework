@@ -1,2 +1,5 @@
 #pragma once
-#include "ovgfWindow.h"
+#include "ovgfWindow.h"class OvgfGame {
+public:
+	void launch();
+};
