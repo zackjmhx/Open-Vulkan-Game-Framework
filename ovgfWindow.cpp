@@ -3,30 +3,34 @@
 #include <stdexcept>
 
 
-class OvgfWindow {
-
-public:
-
-	GLFWwindow* getOvgfWindow(int width, int height) {
-		if (window != nullptr) return window; //if we have a window, do not try and reinitialize - game window should be singleton
+	GLFWwindow* OvgfWindow::getOvgfWindow(int width, int height) {
+		if (OvgfWindow::window != nullptr) return window; //if we have a window, do not try and reinitialize - game window should be singleton
 
 		OvgfWindow(width, height);
 
 		return window;
 	}
 
+	GLFWwindow* OvgfWindow::getOvgfWindow() {
+		//use this overload primarily to get an already created window - will use default initalizers otherwise
+		if (window != nullptr) return window; //if we have a window, do not try and reinitialize - game window should be singleton
 
-private:
+		OvgfWindow(); //just use defaults 
 
-	OvgfWindow(int width, int height) {
+		return window;
+	}
+
+
+
+	OvgfWindow::OvgfWindow(int width, int height) {
 		initWindow(width, height);
 	}
 
-	GLFWwindow *window = nullptr;
-	int width;
-	int height;
+	OvgfWindow::OvgfWindow() {
+		initWindow(800, 600);
+	}
 
-	void initWindow(int width, int height) {
+	void OvgfWindow::initWindow(int width, int height) {
 
 		if (!glfwInit())
 			throw std::runtime_error("Failed to init GLFW");
@@ -42,7 +46,7 @@ private:
 
 	}
 
-	static void onWindowResize(GLFWwindow *window, int width, int height) {
+	void OvgfWindow::onWindowResize(GLFWwindow *window, int width, int height) {
 		if (width == 0 || height == 0) return;
 
 		/*
@@ -56,9 +60,8 @@ private:
 
 	}
 
-	void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
+	void OvgfWindow::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 	{
 		if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
 			glfwSetWindowShouldClose(window, GLFW_TRUE);
 	}
-};
