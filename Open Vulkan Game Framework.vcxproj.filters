@@ -15,18 +15,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Game.cpp">
+    <ClCompile Include="ovgfWindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ovgfWindow.cpp">
+    <ClCompile Include="ovgfGame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h">
+    <ClInclude Include="Include\ovgfWindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ovgfWindow.h">
+    <ClInclude Include="Include\ovfgGame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

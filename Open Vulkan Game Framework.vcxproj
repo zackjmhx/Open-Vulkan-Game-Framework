@@ -19,12 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="ovgfGame.cpp" />
     <ClCompile Include="ovgfWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="ovgfWindow.h" />
+    <ClInclude Include="Include\ovfgGame.h" />
+    <ClInclude Include="Include\ovgfWindow.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{99efaa60-c316-4110-bb05-676ee1829533}</ProjectGuid>
@@ -112,7 +112,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>E:\Libraries\glm-0.9.9-a2;E:\Libraries\glfw-3.2.1.bin.WIN64\include;E:\VulkanSDK\1.0.65.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\GitHub\learning-projects\vulkan-learning\TriangleBasics\Open Vulkan Game Framework\Include;E:\Libraries\glm-0.9.9-a2;E:\Libraries\glfw-3.2.1.bin.WIN64\include;E:\VulkanSDK\1.0.65.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -150,7 +150,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>E:\Libraries\glm-0.9.9-a2;E:\Libraries\glfw-3.2.1.bin.WIN64\include;E:\VulkanSDK\1.0.65.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\GitHub\learning-projects\vulkan-learning\TriangleBasics\Open Vulkan Game Framework\Include;E:\Libraries\glm-0.9.9-a2;E:\Libraries\glfw-3.2.1.bin.WIN64\include;E:\VulkanSDK\1.0.65.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
