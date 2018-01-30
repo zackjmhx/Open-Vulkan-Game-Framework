@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="ovgfGame.cpp" />
     <ClCompile Include="ovgfWindow.cpp" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\ovfgGame.h" />
