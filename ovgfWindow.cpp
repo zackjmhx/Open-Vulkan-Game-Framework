@@ -1,5 +1,6 @@
 /* Function definitions for current GLFW options*/
 #include "ovgfWindow.h"
+#include <stdexcept>
 
 
 class OvgfWindow {
