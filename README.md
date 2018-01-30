@@ -8,4 +8,4 @@ The goal is to eventually build this Framework out into a proper engine. Hopeful
 
 # Stability
 
-The framework currently has no stable release. While it's being built there is no gaurentee it will work--at all or as expected
+The framework is in alpha and currently has no stable release. While it's being built there is no gaurentee it will work. While it should always compile, it may not function as expected until a full release.
