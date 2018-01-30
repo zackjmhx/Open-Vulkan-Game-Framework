@@ -9,12 +9,10 @@ public:
 	GLFWwindow* getOvgfWindow(int width, int height);
 	GLFWwindow* OvgfWindow::getOvgfWindow();
 
-private:
-	OvgfWindow(int width, int height);
-
 	OvgfWindow();
 
-	
+private:
+	OvgfWindow(int width, int height);
 
 	void initWindow(int width, int height);
 
@@ -22,7 +20,8 @@ private:
 
 	static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 
-	GLFWwindow *window = nullptr;
+	GLFWwindow *window;
+
 	int width;
 	int height;
 };
