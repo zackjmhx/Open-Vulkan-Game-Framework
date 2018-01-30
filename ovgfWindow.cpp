@@ -6,6 +6,13 @@ class OvgfWindow {
 
 public:
 
+	GLFWwindow* getOvgfWindow(int width, int height) {
+		if (window != nullptr) return window; //if we have a window, do not try and reinitialize - game window should be singleton
+
+		OvgfWindow(width, height);
+
+		return window;
+	}
 
 
 private:
