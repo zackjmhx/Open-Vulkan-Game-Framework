@@ -7,6 +7,8 @@ class OvgfGame {
 public:
 	void launch();
 
+	OvgfGame();
+
 private:
 	OvgfWindow window; //Internally relies on GLFW for window abstraction - implements basic functionality
 	void mainLoop();
