@@ -5,16 +5,18 @@
 #ifndef OVGF_GAME_H
 #define OVGF_GAME_H
 #include <ovgfWindow.h>
-#include <stdexcept>
 
-class OvgfGame {
-public:
-	void launch();
+namespace ovgf {
 
-	OvgfGame();
+	class Game {
+	public:
+		void launch();
 
-private:
-	OvgfWindow window; //Internally relies on GLFW for window abstraction - implements basic functionality
-	void mainLoop();
-};
+		Game();
+
+	private:
+		Window window; //Internally relies on GLFW for window abstraction - implements basic functionality
+		void mainLoop();
+	};
+}
 #endif
