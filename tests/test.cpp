@@ -1,7 +1,7 @@
 #include <ovfgGame.h>
 
 void main() {
-	OvgfGame game;
+	ovgf::Game game;
 
 	game.launch();
 }
