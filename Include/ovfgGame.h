@@ -1,5 +1,9 @@
-#ifndef OVGF_GAME
-#define OVGF_GAME
+#if _pragma_once_support
+#pragma once
+#endif
+
+#ifndef OVGF_GAME_H
+#define OVGF_GAME_H
 #include <ovgfWindow.h>
 #include <stdexcept>
 
