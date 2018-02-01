@@ -9,3 +9,13 @@ The goal is to eventually build this Framework out into a proper engine. Hopeful
 # Stability
 
 The framework is in alpha and currently has no stable release. While it's being built there is no gaurentee it will work. While it should always compile, it may not function as expected until a full release.
+
+# File naming structure
+
+Files are named with the following convention:
+
+ovfg<Namespace1><2>...<n>[Class/Struct name](Libraires based on)
+  
+  e.g. ovgfStructsQueriesVersion - structure queries for the Version structure 
+          or 
+             ovgfObjectsWindowGLFW - window object based on GLFW
