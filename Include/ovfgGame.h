@@ -4,7 +4,7 @@
 
 #ifndef OVGF_GAME_H
 #define OVGF_GAME_H
-#include <ovgfWindow.h>
+#include "objects\ovgfObjectsWindowGLFW.h"
 
 namespace ovgf {
 
@@ -15,7 +15,7 @@ namespace ovgf {
 		Game();
 
 	private:
-		Window window; //Internally relies on GLFW for window abstraction - implements basic functionality
+		objects::Window window; //Internally relies on GLFW for window abstraction - implements basic functionality
 		void mainLoop();
 	};
 }
