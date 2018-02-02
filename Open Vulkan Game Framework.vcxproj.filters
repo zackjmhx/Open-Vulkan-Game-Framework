@@ -15,16 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\ovgfWindow.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\ovgfGame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="tests\test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\structs\ovgfStructsVersion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\structs\ovgfStructsAppInfo.cpp">
@@ -33,11 +27,17 @@
     <ClCompile Include="src\structs\queries\ovgfStructsQueriesVersion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\objects\ovgfObjectsInstanceVk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\objects\ovgfObjectsWindowGLFW.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\objects\ovgfObjectsInstanceVk.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Include\ovgfWindow.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Include\ovfgGame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -48,6 +48,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Include\structs\queries\ovgfStructsQueriesVersion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\objects\ovgfObjectsWindowGLFW.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
