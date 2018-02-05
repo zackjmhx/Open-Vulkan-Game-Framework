@@ -7,3 +7,8 @@ x64/Debug/vc140.idb
 x64/Debug/vc140.pdb
 x64/Debug/test.obj
 *.obj
+x64/Release/vc140.pdb
+x64/Release/Open Vulkan Game Framework.log
+x64/Debug/test.new.obj.enc
+x64/Debug/ovgfobjectswindowglfw.new.obj.enc
+x64/Debug/ovgfgame.new.obj.enc
