@@ -2,9 +2,9 @@
 #pragma once
 #endif
 
-#ifndef OVGF_STRUCTS_VERSION_QUERY_H
-#define OVGF_STRUCTS_VERSION_QUERY_H
-#include "structs\ovgfStructsVersion.h"
+#ifndef OVGF_STRUCTS_VERSION_QUERY_HPP
+#define OVGF_STRUCTS_VERSION_QUERY_HPP
+#include "structs\ovgfStructsVersion.hpp"
 
 
 namespace ovgf {
