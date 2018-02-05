@@ -21,36 +21,36 @@
     <ClCompile Include="tests\test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\structs\ovgfStructsAppInfo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\structs\queries\ovgfStructsQueriesVersion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\objects\ovgfObjectsInstanceVk.cpp">
+    <ClCompile Include="Include\objects\ovgfObjectsInstance.hpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\objects\ovgfObjectsWindowGLFW.cpp">
+    <ClCompile Include="src\objects\ovgfObjectsInstance.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Include\objects\ovgfObjectsInstanceVk.h">
+    <ClCompile Include="src\structs\ovgfStructsInstanceInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Include\ovfgGame.h">
+    <ClInclude Include="Include\structs\queries\ovgfStructsQueriesVersion.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\structs\ovgfStructsVersion.h">
+    <ClInclude Include="Include\structs\ovgfStructsVersion.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\structs\ovgfStructsAppInfo.h">
+    <ClInclude Include="Include\ovfgGame.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\structs\queries\ovgfStructsQueriesVersion.h">
+    <ClInclude Include="Include\structs\ovgfStructsQueues.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\objects\ovgfObjectsWindowGLFW.h">
+    <ClInclude Include="Include\objects\queries\ovgfObjectsQueriesInstance.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\structs\ovgfStructsInstanceInfo.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

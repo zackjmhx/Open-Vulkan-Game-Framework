@@ -19,20 +19,20 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Include\objects\ovgfObjectsInstanceVk.h" />
-    <ClCompile Include="src\objects\ovgfObjectsInstanceVk.cpp" />
+    <ClCompile Include="Include\objects\ovgfObjectsInstance.hpp" />
+    <ClCompile Include="src\objects\ovgfObjectsInstance.cpp" />
     <ClCompile Include="src\ovgfGame.cpp" />
-    <ClCompile Include="src\structs\ovgfStructsAppInfo.cpp" />
-    <ClCompile Include="src\objects\ovgfObjectsWindowGLFW.cpp" />
+    <ClCompile Include="src\structs\ovgfStructsInstanceInfo.cpp" />
     <ClCompile Include="src\structs\queries\ovgfStructsQueriesVersion.cpp" />
     <ClCompile Include="tests\test.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Include\ovfgGame.h" />
-    <ClInclude Include="Include\structs\ovgfStructsAppInfo.h" />
-    <ClInclude Include="Include\objects\ovgfObjectsWindowGLFW.h" />
-    <ClInclude Include="Include\structs\ovgfStructsVersion.h" />
-    <ClInclude Include="Include\structs\queries\ovgfStructsQueriesVersion.h" />
+    <ClInclude Include="Include\objects\queries\ovgfObjectsQueriesInstance.hpp" />
+    <ClInclude Include="Include\ovfgGame.hpp" />
+    <ClInclude Include="Include\structs\ovgfStructsInstanceInfo.hpp" />
+    <ClInclude Include="Include\structs\ovgfStructsQueues.hpp" />
+    <ClInclude Include="Include\structs\ovgfStructsVersion.hpp" />
+    <ClInclude Include="Include\structs\queries\ovgfStructsQueriesVersion.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{99efaa60-c316-4110-bb05-676ee1829533}</ProjectGuid>
@@ -120,7 +120,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>E:\GitHub\learning-projects\vulkan-learning\TriangleBasics\Open Vulkan Game Framework\Include;E:\Libraries\glm-0.9.9-a2;E:\Libraries\glfw-3.2.1.bin.WIN64\include;E:\VulkanSDK\1.0.65.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Libraries\samples;E:\GitHub\learning-projects\vulkan-learning\TriangleBasics\Open Vulkan Game Framework\Include;E:\Libraries\glm-0.9.9-a2;E:\Libraries\glfw-3.2.1.bin.WIN64\include;E:\VulkanSDK\1.0.65.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -158,7 +158,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>E:\GitHub\learning-projects\vulkan-learning\TriangleBasics\Open Vulkan Game Framework\Include;E:\Libraries\glm-0.9.9-a2;E:\Libraries\glfw-3.2.1.bin.WIN64\include;E:\VulkanSDK\1.0.65.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Libraries\samples;E:\GitHub\learning-projects\vulkan-learning\TriangleBasics\Open Vulkan Game Framework\Include;E:\Libraries\glm-0.9.9-a2;E:\Libraries\glfw-3.2.1.bin.WIN64\include;E:\VulkanSDK\1.0.65.1\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
