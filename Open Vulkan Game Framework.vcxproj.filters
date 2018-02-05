@@ -30,7 +30,7 @@
     <ClCompile Include="src\objects\ovgfObjectsInstance.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\structs\ovgfStructsInstanceInfo.cpp">
+    <ClCompile Include="src\objects\ovgfObjectsDevice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,10 +47,10 @@
     <ClInclude Include="Include\structs\ovgfStructsQueues.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\objects\queries\ovgfObjectsQueriesInstance.hpp">
+    <ClInclude Include="Include\objects\ovgfObjectsDevice.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\structs\ovgfStructsInstanceInfo.hpp">
+    <ClInclude Include="Include\structs\ovgfStructsInstanceUtils.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
