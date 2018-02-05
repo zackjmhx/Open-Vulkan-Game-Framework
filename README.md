@@ -14,8 +14,5 @@ The framework is in alpha and currently has no stable release. While it's being 
 
 Files are named with the following convention:
 
-ovfg<Namespace1><2>...<n>[Class/Struct name](Libraires based on)
-  
+ovfg<Namespace1><2>...<n>[Class/Struct name]
   e.g. ovgfStructsQueriesVersion - structure queries for the Version structure 
-          or 
-             ovgfObjectsWindowGLFW - window object based on GLFW
