@@ -1,12 +1,9 @@
 #include "objects\ovgfObjectsInstance.hpp"
 #include "structs\ovgfStructsQueues.hpp"
-#include "structs\ovgfStructsInstanceInfo.hpp"
+#include "structs\ovgfStructsInstanceUtils.hpp"
 
-#include <iostream>
-#include <chrono>
 
-#include <vulkan\vulkan.hpp>
-#include <GLFW\glfw3.h>
+
 
 
 //Shove this up here for now, need to move sooner than later
@@ -28,8 +25,8 @@ const bool enableValidationLayers = false;
 
 //end dump
 
-namespace sc = ::std::chrono;
-using sc::seconds;
+
+namespace osIU = ::ovgf::structs;
 
 namespace ovgf {
 	namespace objects {
@@ -52,6 +49,8 @@ namespace ovgf {
 			InstanceImpl(std::string name, int wWidth, int wHeight);
 
 		private:
+			structs::InstanceUtilities iu;
+
 			VkInstance instance;
 			GLFWwindow *window;
 			Device *device; //only track a single device for now TODO: Add multi-device support
@@ -69,30 +68,21 @@ namespace ovgf {
 			static void onWindowResize(GLFWwindow *window, int width, int height);
 			static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 
-			std::vector<const char*> getRequiredExtentions();
 		};
-
-
 
 		void Instance::launch() {
 			pInstanceImpl->launch();
 		}
 
 		void Instance::InstanceImpl::launch() {
-			auto times = sc::high_resolution_clock::now();
-			uint32_t frames = 0;
+			
 
 			while (!glfwWindowShouldClose(window)) {
 
 				glfwPollEvents();
 
-				frames++;
-
-				if ((sc::high_resolution_clock::now() - times) >= seconds{ 1 }) {
-					::std::cout << "Current FPS: " << frames << ::std::endl;
-					frames = 0;
-					times = ::std::chrono::high_resolution_clock::now();
-				}
+				iu.frameCount();
+				
 			}
 		}
 
@@ -104,61 +94,18 @@ namespace ovgf {
 
 		Instance::InstanceImpl::InstanceImpl(std::string name, int wWidth, int wHeight) {
 
-			if (!glfwInit())
-				throw std::runtime_error("Failed to init GLFW");
+			iu.getWindow(&window, name, wWidth, wHeight, onWindowResize, key_callback);
 
 
-			glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
-			glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE); //turn off resizeability for now
+			VkApplicationInfo appInfo = iu.createStructAppInfo(name, { 1, 0, 0 }, "Null", { 1, 0, 0 }, { 1, 0, 0 }); // eventually fill this in from ini files
 
-			window = glfwCreateWindow(wWidth, wHeight, name.c_str(), nullptr, nullptr);
+			auto extention = iu.getRequiredExtentions(enableValidationLayers);
 
-
-			//glfwSetWindowUserPointer(window, this);
-			glfwSetWindowSizeCallback(window, onWindowResize);
-
-			glfwSetKeyCallback(window, key_callback);
-
-
-			VkApplicationInfo appInfo = structs::createStructAppInfo(name, { 1, 0, 0 }, "Null", { 1, 0, 0 }, { 1, 0, 0 });
-
-
-			VkInstanceCreateInfo createInfo = {};
-			createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
-			createInfo.pApplicationInfo = &appInfo;
-
-			auto extention = getRequiredExtentions();
-
-			createInfo.enabledExtensionCount = static_cast<uint32_t>(extention.size());
-			createInfo.ppEnabledExtensionNames = extention.data();
-
-			if (enableValidationLayers) {
-				createInfo.enabledLayerCount = static_cast<uint32_t>(validationLayers.size());
-				createInfo.ppEnabledLayerNames = validationLayers.data();
-			} else {
-				createInfo.enabledLayerCount = 0;
-				createInfo.ppEnabledLayerNames = nullptr;
-			}
-
-			if (vkCreateInstance(&createInfo, nullptr, &instance) != VK_SUCCESS)
-				throw std::runtime_error("Failed to create instance!");
+			iu.createVkInstance(appInfo, nullptr, &instance, extention, enableValidationLayers, validationLayers);
 
 		}
 
-		std::vector<const char*> Instance::InstanceImpl::getRequiredExtentions() {
-			uint32_t glfwExtentionCount = 0;
-			const char **glfwExtentions;
-
-			glfwExtentions = glfwGetRequiredInstanceExtensions(&glfwExtentionCount);
-
-			std::vector<const char*> extentions(glfwExtentions, glfwExtentions + glfwExtentionCount);
-
-			if (enableValidationLayers)
-				extentions.push_back(VK_EXT_DEBUG_REPORT_EXTENSION_NAME);
-
-
-			return extentions;
-		}
+		
 
 
 
@@ -176,10 +123,13 @@ namespace ovgf {
 		}
 
 		void Instance::InstanceImpl::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
+			//Default key event handling function - closes when esc is pressed
 			if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
 				glfwSetWindowShouldClose(window, GLFW_TRUE);
 		}
 
+
+		
 
 	}
 }
