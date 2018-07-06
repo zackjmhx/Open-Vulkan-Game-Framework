@@ -16,3 +16,5 @@ Files are named with the following convention:
 
 ovfg<Namespace1><2>...<n>[Class/Struct name]
   e.g. ovgfStructsQueriesVersion - structure queries for the Version structure 
+  
+I now highly regret such a silly and verbose naming convention. The dir based namespacing was enough. However, I no longer update this repository as I've moved to a private GitLab, so here they stand, a monument to a less wise me.
