@@ -1,3 +1,7 @@
+# NEW HOME
+
+The project is being rebuilt from the ground up over at https://gitlab.com/zackjmh/ThreadCore
+
 # Open-Vulkan-Game-Framework
 
 OVGF is meant, for now, to be a Vulkan based rapid prototyping tool to assist in game development.
